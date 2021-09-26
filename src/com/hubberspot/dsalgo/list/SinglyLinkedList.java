@@ -220,6 +220,11 @@ public class SinglyLinkedList {
 			temp = current;
 			current = current.next;
 		}
+		if(temp==null) {
+			head=newNode;
+			newNode.next=current;
+			return head;
+		}
 
 		newNode.next = current;
 		temp.next = newNode;
